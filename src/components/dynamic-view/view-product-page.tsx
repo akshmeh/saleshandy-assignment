@@ -1,14 +1,13 @@
 "use client";
-
+import { useEffect, useState } from "react";
+import ProductImageGallery from "@/components/product/ProductImageGallery";
 import { useProductStore } from "@/store/productStore";
-import { Product } from "@/types";
+import { useUIStore } from "@/store/uiStore";
 import { ArrowLeft, Star, Trash2 } from "lucide-react";
 import Link from "next/link";
-import { useEffect, useState } from "react";
-import ProductImageGallery from "../product/ProductImageGallery";
 import { useCartStore } from "@/store/cartStore";
-import { useUIStore } from "@/store/uiStore";
-import ProductSpecifications from "../product/ProductSpecifications";
+import ProductSpecifications from "@/components/product/ProductSpecifications";
+import { Product } from "@/types";
 
 export default function ViewProductPage({
   pid,

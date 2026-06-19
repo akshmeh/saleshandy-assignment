@@ -4,6 +4,7 @@ import { useProductStore } from '../../store/productStore';
 import { ArrowRight, CheckCircle2 } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
+import { asset } from '@/lib/assets';
 
 export default function Footer() {
   const { setSelectedCategory } = useProductStore();
@@ -34,7 +35,7 @@ export default function Footer() {
           <div className="md:col-span-5 flex flex-col justify-between">
             <div>
               <div className="flex items-center gap-1 text-xl font-bold tracking-[0.2em] uppercase text-text-fg mb-4">
-             <img src="/logo.svg" alt='saleshandy' />
+             <img src={asset("/logo.svg")} alt='saleshandy' />
               </div>
               <p className="text-sm text-text-muted leading-relaxed max-w-sm mb-6">
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et aliquam perspiciatis maxime, distinctio molestias, vitae ullam delectus dolores consequuntur repudiandae iure debitis atque quidem, provident iste fuga labore. Error, dignissimos.

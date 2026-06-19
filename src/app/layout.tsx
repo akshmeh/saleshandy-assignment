@@ -7,6 +7,7 @@ import SearchBar from "../components/search/SearchBar";
 import MiniCart from "../components/cart/MiniCart";
 import { useState } from "react";
 import Link from "next/link";
+import { asset } from "@/lib/assets";
 
 
 export default function RootLayout({
@@ -29,7 +30,7 @@ export default function RootLayout({
           <div className="w-64 bg-white h-full p-6 flex flex-col justify-between shadow-xl">
             <div>
               <div className="flex items-center justify-between mb-8 pb-4 border-b border-brand-border">
-                <span className="font-caveat font-bold text-base text-text-fg">NAVIGATE AURA</span>
+                <img src={asset("/logo.svg")} alt="saleshandy" />
                 <button                  onClick={() => setMobileMenuOpen(false)}
                   className="font-matter text-xs text-text-muted border border-brand-border px-1.5 py-0.5 rounded"
                 >

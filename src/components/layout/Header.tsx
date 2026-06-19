@@ -4,6 +4,7 @@ import { useWishlistStore } from '../../store/wishlistStore';
 import { Search, ShoppingBag, Heart, User, Sparkles, Menu } from 'lucide-react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { asset } from '@/lib/assets';
 
 interface HeaderProps {
   onMobileMenuToggle: () => void;
@@ -40,7 +41,7 @@ export default function Header({ onMobileMenuToggle }: HeaderProps) {
              href="/"
               className="group flex items-center gap-1 text-xl font-bold tracking-[0.2em] uppercase text-text-fg cursor-pointer"
             >
-              <img src="/logo.svg" />
+              <img src={asset("/logo.svg")} alt="saleshandy" />
             </Link>
           </div>
 

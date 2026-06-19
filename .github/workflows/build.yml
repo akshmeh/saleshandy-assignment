@@ -79,7 +79,8 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./out
-
+    env:
+      NEXT_PUBLIC_BASE_PATH: /saleshandy-assignment
   # Deployment job
   deploy:
     environment:

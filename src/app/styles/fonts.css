@@ -1,0 +1,116 @@
+/* Caveat */
+
+@font-face {
+    font-family: 'Caveat';
+    src: url('./fonts/caveat/Caveat-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Caveat';
+    src: url('./fonts/caveat/Caveat-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Caveat';
+    src: url('./fonts/caveat/Caveat-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Caveat';
+    src: url('./fonts/caveat/Caveat-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  
+  /* Matter */
+  
+  @font-face {
+    font-family: 'Matter';
+    src: url('./fonts/matter/Matter-Light.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Matter';
+    src: url('./fonts/matter/Matter-LightItalic.otf') format('opentype');
+    font-weight: 300;
+    font-style: italic;
+  }
+  
+  @font-face {
+    font-family: 'Matter';
+    src: url('./fonts/matter/Matter-Regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Matter';
+    src: url('./fonts/matter/Matter-RegularItalic.otf') format('opentype');
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  @font-face {
+    font-family: 'Matter';
+    src: url('./fonts/matter/Matter-Medium.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Matter';
+    src: url('./fonts/matter/Matter-MediumItalic.otf') format('opentype');
+    font-weight: 500;
+    font-style: italic;
+  }
+  
+  @font-face {
+    font-family: 'Matter';
+    src: url('./fonts/matter/Matter-SemiBold.otf') format('opentype');
+    font-weight: 600;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Matter';
+    src: url('./fonts/matter/Matter-SemiBoldItalic.otf') format('opentype');
+    font-weight: 600;
+    font-style: italic;
+  }
+  
+  @font-face {
+    font-family: 'Matter';
+    src: url('./fonts/matter/Matter-Bold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Matter';
+    src: url('./fonts/matter/Matter-BoldItalic.otf') format('opentype');
+    font-weight: 700;
+    font-style: italic;
+  }
+  
+  @font-face {
+    font-family: 'Matter';
+    src: url('./fonts/matter/Matter-Heavy.otf') format('opentype');
+    font-weight: 800;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Matter';
+    src: url('./fonts/matter/Matter-HeavyItalic.otf') format('opentype');
+    font-weight: 800;
+    font-style: italic;
+  }

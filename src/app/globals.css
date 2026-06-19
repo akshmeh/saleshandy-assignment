@@ -1,0 +1,99 @@
+@import url("./styles/fonts.css");
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@theme {
+  --color-page-bg: #ffffff;
+  --color-text-fg: #0b0b0b;
+  --color-text-muted: #656565;
+  --color-brand-blue: #275df5;
+  --color-brand-purple: #9662ff;
+  --color-brand-green: #37b489;
+  --color-brand-yellow: #ffce1f;
+  --color-brand-border: #e2e8f0;
+  --color-brand-muted-bg: #f9f9f9;
+  --color-brand-red: #0f172a;
+  --color-border-input: #dc2626;
+
+
+  /* Spacing */
+  --spacing-space-2: 2px;
+  --spacing-space-4: 4px;
+  --spacing-space-6: 6px;
+  --spacing-space-8: 8px;
+  --spacing-space-10: 10px;
+  --spacing-space-12: 12px;
+  --spacing-space-14: 14px;
+  --spacing-space-16: 16px;
+  --spacing-space-20: 20px;
+  --spacing-space-24: 24px;
+  --spacing-space-32: 32px;
+  --spacing-space-40: 40px;
+  --spacing-space-48: 48px;
+  --spacing-space-56: 56px;
+  --spacing-space-64: 64px;
+  --spacing-space-96: 96px;
+  --spacing-space-112: 112px;
+  --spacing-space-128: 128px;
+
+  /* Border Radius */
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-default: 8px;
+  --radius-input: 8px;
+  --radius-card: 10px;
+  --radius-primary: 14px;
+  --radius-chip: 18px;
+  --radius-pill: 22px;
+
+
+  /* Fonts */
+  --font-matter: "Matter", sans-serif;
+  --font-caveat: "Caveat", sans-serif;
+
+}
+
+@layer base {
+  body {
+    background-color: var(--color-page-bg);
+    color: var(--color-text-fg);
+    font-family: var(--font-matter);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6{
+    color: var(--color-brand-blue);
+
+    span{
+      font-family: var(--font-caveat);
+    }
+  }
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: var(--color-brand-muted-bg);
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #dddddd;
+  border-radius: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #cccccc;
+}
+
+@keyframes pulse-subtle {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.85; transform: scale(0.98); }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}

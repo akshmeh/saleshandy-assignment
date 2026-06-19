@@ -101,6 +101,77 @@ Responsible for:
 
 ---
 
+# 🧩 Dynamic View Architecture
+
+The application follows a hybrid rendering pattern using **Next.js App Router Server Components** and **Client Components**.
+
+Dynamic routes are handled at the page level, where route parameters are resolved on the server and then passed to dedicated client-side view components.
+
+## Folder Structure
+
+```text
+components
+└── dynamic-view
+    ├── view-order-page.tsx
+    └── view-product-page.tsx
+```
+
+## Architecture Flow
+
+```text
+Route Request
+      │
+      ▼
+Server Page Component
+(app/orders/[oid]/page.tsx)
+(app/products/[pid]/page.tsx)
+      │
+      │ Extract route params
+      ▼
+Client View Component
+(view-order-page.tsx)
+(view-product-page.tsx)
+      │
+      ▼
+Zustand Store
+      │
+      ▼
+UI Components
+```
+
+## Product Details Page
+
+The product details page uses a dynamic route:
+
+```text
+/products/[pid]
+```
+
+The server page receives the product identifier from the URL and passes it to the client-side view component.
+
+
+## Order Details Page
+
+The order details page follows the same pattern.
+
+### Route
+
+```text
+/orders/[oid]
+```
+
+## Benefits
+
+- Server-side route parameter resolution.
+- Clean separation between routing and presentation.
+- Better compatibility with Next.js App Router.
+- Client-side access to Zustand stores.
+- Reusable view components.
+- Easier testing and maintenance.
+- Keeps page files lightweight and focused on routing concerns.
+
+This pattern is used for all dynamic detail pages where route parameters are required before rendering state-driven UI components.
+
 ## Zustand Stores
 
 ```text

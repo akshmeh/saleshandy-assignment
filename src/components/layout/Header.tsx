@@ -100,7 +100,7 @@ export default function Header({ onMobileMenuToggle }: HeaderProps) {
             >
               <Heart className={`w-5 h-5 ${pathname.includes('wishlist') ? 'fill-text-fg text-text-fg' : ''}`} />
               {wishlistCount > 0 && (
-                <span className="absolute top-1.5 right-1.5 w-4 h-4 rounded-full bg-text-fg text-[9px] font-bold text-white flex items-center justify-center">
+                <span className="absolute top-0.5 right-0.5 w-4 h-4 rounded-full bg-brand-blue text-[9px] font-bold text-white flex items-center justify-center">
                   {wishlistCount}
                 </span>
               )}
@@ -114,7 +114,7 @@ export default function Header({ onMobileMenuToggle }: HeaderProps) {
             >
               <ShoppingBag className="w-5 h-5" />
               {cartCount > 0 && (
-                <span className="absolute top-1.5 right-1.5 w-4 h-4 rounded-full bg-text-fg text-[9px] font-bold text-white flex items-center justify-center">
+                <span className="absolute top-0.5 right-0.5 w-4 h-4 rounded-full bg-brand-blue text-[9px] font-bold text-white flex items-center justify-center">
                   {cartCount}
                 </span>
               )}

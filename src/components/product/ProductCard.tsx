@@ -54,7 +54,7 @@ export default function ProductCard({ product }: ProductCardProps) {
             e.stopPropagation();
             toggleWishlist(product);
           }}
-          className="absolute top-3 right-3 z-10 p-2 rounded-sm bg-white border border-brand-border text-text-muted hover:text-text-fg active:scale-95 transition"
+          className="absolute top-3 right-3 z-10 p-2 rounded-sm bg-white border border-brand-border text-text-muted hover:text-text-fg active:scale-95 transition cursor-pointer"
           title={isLiked ? 'Remove from Wishlist' : 'Add to Wishlist'}
         >
           <Heart className={`w-3.5 h-3.5 ${isLiked ? 'fill-text-fg text-text-fg' : ''}`} />
@@ -89,6 +89,8 @@ export default function ProductCard({ product }: ProductCardProps) {
       </div>
 
       <div className="p-4 flex-1 flex flex-col justify-between">
+      <Link href={`/products/${product.slug}`}>
+
         <div>
           
           <div className="flex items-center justify-between mb-1.5">
@@ -129,15 +131,14 @@ export default function ProductCard({ product }: ProductCardProps) {
               </span>
             )}
           </div>
-        <Link href={`/products/${product.slug}`}>
           
           <span className="text-[10px] text-text-fg font-bold uppercase tracking-widest flex items-center group-hover:translate-x-0.5 transition-transform duration-200">
             Details
             <ArrowUpRight className="w-3 h-3 ml-0.5" />
           </span>
-          </Link>
         </div>
 
+          </Link>
       </div>
     </article>
   );

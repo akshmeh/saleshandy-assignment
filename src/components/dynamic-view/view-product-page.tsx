@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import ProductImageGallery from "@/components/product/ProductImageGallery";
 import { useProductStore } from "@/store/productStore";
 import { useUIStore } from "@/store/uiStore";
-import { ArrowLeft, Star, Trash2 } from "lucide-react";
+import { ArrowLeft, MinusSquare, PlusSquare, Star } from "lucide-react";
 import Link from "next/link";
 import { useCartStore } from "@/store/cartStore";
 import ProductSpecifications from "@/components/product/ProductSpecifications";
@@ -200,19 +200,19 @@ export default function ViewProductPage({
                     <button
                       id="detail-qty-minus"
                       onClick={() => setPurchaseQty(Math.max(1, purchaseQty - 1))}
-                      className="p-1 text-text-muted hover:text-text-fg transition"
+                      className="p-1 text-text-muted hover:text-text-fg transition cursor-pointer"
                     >
-                      <Trash2 className="w-3.5 h-3.5" />
+                      <MinusSquare className="w-3.5 h-3.5" />
                     </button>
-                    <span className="px-4 font-matter font-bold text-sm text-text-fg text-center min-w-8">
+                    <span className="px-4 font-matter font-bold text-sm text-brand-blue text-center min-w-8">
                       {purchaseQty}
                     </span>
                     <button
                       id="detail-qty-plus"
                       onClick={() => setPurchaseQty(purchaseQty + 1)}
-                      className="p-1 text-text-muted hover:text-text-fg transition"
+                      className="p-1 text-text-muted hover:text-text-fg transition cursor-pointer"
                     >
-                      <Star className="w-3.5 h-3.5 fill-current" />
+                      <PlusSquare className="w-3.5 h-3.5" />
                     </button>
                   </div>
   

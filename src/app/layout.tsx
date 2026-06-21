@@ -5,7 +5,7 @@ import Header from "../components/layout/Header";
 import Footer from "../components/layout/Footer";
 import SearchBar from "../components/search/SearchBar";
 import MiniCart from "../components/cart/MiniCart";
-import { useState } from "react";
+import { MouseEvent, useState } from "react";
 import Link from "next/link";
 import { asset } from "@/lib/assets";
 
@@ -18,6 +18,11 @@ export default function RootLayout({
 
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
+  const handleCloseMobile = (e: MouseEvent<HTMLDivElement>) =>{
+      e.preventDefault();
+      setMobileMenuOpen(!mobileMenuOpen)
+  }
+
   return (
     <html lang="en">
       <body className="min-h-screen bg-page-background font-matter text-foreground-text">
@@ -26,7 +31,7 @@ export default function RootLayout({
       <Header onMobileMenuToggle={() => setMobileMenuOpen(!mobileMenuOpen)} />
 
       {mobileMenuOpen && (
-        <div className="fixed inset-0 z-50 md:hidden bg-text-fg/40 backdrop-blur-xs">
+        <div className="fixed inset-0 z-50 md:hidden bg-text-fg/40 backdrop-blur-xs" onClick={handleCloseMobile}>
           <div className="w-64 bg-white h-full p-6 flex flex-col justify-between shadow-xl">
             <div>
               <div className="flex items-center justify-between mb-8 pb-4 border-b border-brand-border">

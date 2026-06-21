@@ -55,12 +55,12 @@ export default function SearchBar() {
     <div className="fixed inset-0 z-50 overflow-y-auto" role="dialog" aria-modal="true">
       <div className="flex items-start justify-center min-h-screen pt-12 md:pt-24 px-4 pb-4 text-center">
         
-        {/* <div 
+        <div 
           onClick={() => setSearchOpen(false)}
           className="fixed inset-0 bg-text-fg/40 backdrop-blur-sm transition-opacity" 
-        /> */}
+        />
 
-        <div className="inline-block w-full max-w-2xl bg-white rounded-primary text-left overflow-hidden shadow-2xl transform transition-all align-middle">
+        <div className="inline-block w-full max-w-2xl bg-white rounded-primary text-left overflow-hidden shadow-2xl transform transition-all align-middle z-10">
           
           <div className="p-6">
             
